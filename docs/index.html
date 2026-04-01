@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fund Quiz (GitHub Pages)</title>
+  <style>
+    body{font-family:Inter,system-ui,sans-serif;max-width:900px;margin:24px auto;padding:0 16px;color:#1f2937}
+    .card{border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin-bottom:12px}
+    button{background:#2563eb;color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
+    input,select{padding:8px;border:1px solid #d1d5db;border-radius:8px}
+    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+    .q{border:1px solid #e5e7eb;border-radius:10px;padding:10px;margin-top:8px}
+  </style>
+</head>
+<body>
+  <h1>Fund Quiz</h1>
+  <p>공시 문서 기반 퀴즈 서비스 (GitHub Pages Front)</p>
+
+  <div class="card">
+    <div class="row">
+      <label>API Base URL</label>
+      <input id="api" style="min-width:360px" placeholder="https://your-cloud-run-url" />
+      <button onclick="saveApi()">저장</button>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="row">
+      <input id="q" placeholder="펀드/운용사 검색" />
+      <button onclick="loadFunds()">조회</button>
+    </div>
+    <div id="funds"></div>
+  </div>
+
+  <div class="card" id="quizCard" style="display:none">
+    <h3 id="quizTitle"></h3>
+    <form id="quizForm"></form>
+    <div class="row" style="margin-top:8px"><button type="button" onclick="submitQuiz()">채점</button></div>
+    <div id="result" style="margin-top:8px"></div>
+  </div>
+
+<script>
+let currentQuiz = null;
+
+function apiBase(){ return (localStorage.getItem('apiBase')||'').replace(/\/$/,''); }
+function saveApi(){ localStorage.setItem('apiBase', document.getElementById('api').value.trim()); alert('저장됨'); }
+
+document.getElementById('api').value = localStorage.getItem('apiBase') || '';
+
+async function loadFunds(){
+  const base = apiBase(); if(!base) return alert('API URL을 먼저 저장하세요.');
+  const q = document.getElementById('q').value.trim();
+  const url = q ? `${base}/api/funds/search?q=${encodeURIComponent(q)}` : `${base}/api/funds`;
+  const items = await fetch(url).then(r=>r.json());
+  const el = document.getElementById('funds');
+  if(!items.length){ el.innerHTML = '<p>결과 없음</p>'; return; }
+  el.innerHTML = items.slice(0,20).map(f=>`
+    <div class='q'>
+      <b>${f.fund_name}</b><br/>
+      <small>${f.manager_name || '-'} · ${f.latest_disclosure_date || '-'}</small><br/>
+      <button onclick='openQuiz(${f.fund_id})'>퀴즈 열기</button>
+    </div>`).join('');
+}
+
+async function openQuiz(fundId){
+  const base = apiBase();
+  const quiz = await fetch(`${base}/api/funds/${fundId}/quiz/generate?use_ai=true&force=true&count=3`, {method:'POST'}).then(r=>r.json());
+  currentQuiz = quiz;
+  document.getElementById('quizCard').style.display = 'block';
+  document.getElementById('quizTitle').textContent = `${quiz.title} (${quiz.question_count}문항)`;
+  const form = document.getElementById('quizForm');
+  form.innerHTML = '';
+  quiz.questions.forEach((q, i)=>{
+    const div = document.createElement('div');
+    div.className = 'q';
+    div.innerHTML = `<b>${i+1}. ${q.prompt}</b><br/>` + q.choices.map((c,ci)=>
+      `<label><input type='radio' name='q${i}' value='${ci}'/> ${c}</label><br/>`
+    ).join('');
+    form.appendChild(div);
+  });
+}
+
+async function submitQuiz(){
+  const base = apiBase();
+  const answers = currentQuiz.questions.map((_,i)=>{
+    const v = document.querySelector(`input[name='q${i}']:checked`);
+    return v ? Number(v.value) : -1;
+  });
+  const data = await fetch(`${base}/api/quiz-attempts`, {
+    method:'POST', headers:{'Content-Type':'application/json'},
+    body: JSON.stringify({quiz_id: currentQuiz.quiz_id, answers})
+  }).then(r=>r.json());
+
+  const viewer = `${base}/api/funds/${currentQuiz.disclosure_id}/document-preview`;
+  document.getElementById('result').innerHTML = `<h4>점수: ${data.score}/${data.total}</h4>` +
+    currentQuiz.questions.map((q,i)=>`
+      <div class='q'>
+        <b>문항 ${i+1}</b> · ${data.correct?.[i] ? '정답' : '오답'}<br/>
+        해설: ${q.explanation || '-'}<br/>
+        <a href='${viewer}' target='_blank' rel='noopener'>공시 링크</a>
+      </div>
+    `).join('');
+}
+</script>
+</body>
+</html>

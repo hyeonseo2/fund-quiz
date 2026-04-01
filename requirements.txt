@@ -1,0 +1,15 @@
+fastapi>=0.115,<0.116
+uvicorn[standard]>=0.30,<0.31
+sqlalchemy>=2.0.30,<2.1
+pydantic>=2.8,<3
+pydantic-settings>=2.4,<3
+psycopg[binary]>=3.2,<3.3
+alembic>=1.13,<1.14
+requests>=2.32,<3
+beautifulsoup4>=4.12,<4.13
+lxml>=5.3,<6
+python-multipart>=0.0.9
+openai>=1.54,<2
+redis>=5.0,<6
+pytest>=8.2,<9
+pytest-mock>=3.14,<4

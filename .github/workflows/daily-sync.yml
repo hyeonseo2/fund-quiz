@@ -1,0 +1,38 @@
+name: Daily Disclosure Sync
+
+on:
+  schedule:
+    - cron: '10 0 * * *' # every day 00:10 UTC
+  workflow_dispatch:
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate secrets
+        run: |
+          test -n "${{ secrets.API_BASE_URL }}"
+          test -n "${{ secrets.ADMIN_TOKEN }}"
+          test -n "${{ secrets.CORP_CODES }}"
+
+      - name: Run backfill for corp codes
+        env:
+          API_BASE_URL: ${{ secrets.API_BASE_URL }}
+          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          CORP_CODES: ${{ secrets.CORP_CODES }}
+        run: |
+          set -euo pipefail
+          FROM_DATE=$(date -u -d '30 days ago' +%F)
+          TO_DATE=$(date -u +%F)
+
+          IFS=',' read -ra CODES <<< "$CORP_CODES"
+          for code in "${CODES[@]}"; do
+            code_trimmed=$(echo "$code" | xargs)
+            [ -z "$code_trimmed" ] && continue
+            echo "Sync corp_code=$code_trimmed ($FROM_DATE ~ $TO_DATE)"
+            curl -sS -X POST "$API_BASE_URL/admin/disclosures/backfill" \
+              -H "Content-Type: application/json" \
+              -H "x-admin-token: $ADMIN_TOKEN" \
+              -d "{\"corp_code\":\"$code_trimmed\",\"from_date\":\"$FROM_DATE\",\"to_date\":\"$TO_DATE\"}" \
+              | jq .
+          done

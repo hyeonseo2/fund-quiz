@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Local DB / runtime artifacts
+*.db
+storage/
+tmpstorage/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
