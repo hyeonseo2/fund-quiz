@@ -110,43 +110,48 @@ gcloud run deploy fund-quiz-api \
 
 ---
 
-## 📅 GitHub Actions: Daily Data Batch
+## 📅 GitHub Actions: Daily Static Build
 
-이 저장소에는 매일 공시 데이터를 동기화하는 워크플로우가 포함됩니다.
+이 저장소는 **GitHub Pages 단독 운영**을 지원합니다.
+백엔드 API를 상시 운영하지 않고, GitHub Actions가 매일 데이터를 생성해 `docs/data/funds.json`으로 배포합니다.
 
 워크플로우 파일: `.github/workflows/daily-sync.yml`
 
 필요한 Repository Secrets:
 
-- `API_BASE_URL` (예: `https://fund-quiz-api-xxxxx.run.app`)
-- `ADMIN_TOKEN`
+- `OPENDART_API_KEY`
+- `GEMINI_API_KEY` (선택)
 - `CORP_CODES` (쉼표 구분, 예: `00267526,00260453`)
+
+선택 Repository Variable:
+
+- `PER_CORP_LIMIT` (기본 5)
 
 동작:
 
 - 스케줄 실행(UTC 기준)
-- corp_code별 `/admin/disclosures/backfill` 호출
-- 필요 시 수동 실행 가능 (`workflow_dispatch`)
+- OpenDART 공시 목록 수집
+- (옵션) Gemini로 퀴즈 생성
+- `docs/data/funds.json` 갱신 후 자동 커밋
 
 ---
 
 ## 🧩 GitHub Pages Frontend
 
-정적 프론트는 `docs/` 폴더를 사용하며 GitHub Pages로 배포할 수 있습니다.
+정적 프론트는 `docs/` 폴더를 사용하며 GitHub Pages로 배포됩니다.
 
 워크플로우 파일: `.github/workflows/pages.yml`
 
 기능:
 
-- GitHub Pages에서 API Base URL 입력
-- 운용사/펀드 조회
-- 퀴즈 생성/채점
-- 결과에서 공시 링크 이동
+- 정적 JSON 데이터 기반 펀드/퀴즈 표시
+- 브라우저 내 채점
+- 공시 링크 바로 이동
 
 설정 포인트:
 
 1. GitHub Pages Source를 **GitHub Actions**로 선택
-2. API 서버 `CORS_ALLOW_ORIGINS`에 Pages 도메인 추가
+2. `main` 브랜치 반영 시 자동 배포
 
 ---
 

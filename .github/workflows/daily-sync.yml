@@ -1,38 +1,42 @@
-name: Daily Disclosure Sync
+name: Build Static Data (Daily)
 
 on:
   schedule:
-    - cron: '10 0 * * *' # every day 00:10 UTC
+    - cron: '10 0 * * *'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  backfill:
+  build-data:
     runs-on: ubuntu-latest
     steps:
-      - name: Validate secrets
-        run: |
-          test -n "${{ secrets.API_BASE_URL }}"
-          test -n "${{ secrets.ADMIN_TOKEN }}"
-          test -n "${{ secrets.CORP_CODES }}"
+      - uses: actions/checkout@v4
 
-      - name: Run backfill for corp codes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Build static dataset
         env:
-          API_BASE_URL: ${{ secrets.API_BASE_URL }}
-          ADMIN_TOKEN: ${{ secrets.ADMIN_TOKEN }}
+          OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CORP_CODES: ${{ secrets.CORP_CODES }}
+          PER_CORP_LIMIT: ${{ vars.PER_CORP_LIMIT }}
         run: |
-          set -euo pipefail
-          FROM_DATE=$(date -u -d '30 days ago' +%F)
-          TO_DATE=$(date -u +%F)
+          python scripts/build_static_data.py
 
-          IFS=',' read -ra CODES <<< "$CORP_CODES"
-          for code in "${CODES[@]}"; do
-            code_trimmed=$(echo "$code" | xargs)
-            [ -z "$code_trimmed" ] && continue
-            echo "Sync corp_code=$code_trimmed ($FROM_DATE ~ $TO_DATE)"
-            curl -sS -X POST "$API_BASE_URL/admin/disclosures/backfill" \
-              -H "Content-Type: application/json" \
-              -H "x-admin-token: $ADMIN_TOKEN" \
-              -d "{\"corp_code\":\"$code_trimmed\",\"from_date\":\"$FROM_DATE\",\"to_date\":\"$TO_DATE\"}" \
-              | jq .
-          done
+      - name: Commit and push dataset
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/funds.json
+          git diff --cached --quiet && echo "No changes" && exit 0
+          git commit -m "chore(data): refresh static quiz dataset"
+          git push
