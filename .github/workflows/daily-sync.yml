@@ -28,6 +28,7 @@ jobs:
           OPENDART_API_KEY: ${{ secrets.OPENDART_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           CORP_CODES: ${{ secrets.CORP_CODES }}
+          MAJOR_MANAGER_LIMIT: ${{ vars.MAJOR_MANAGER_LIMIT }}
           PER_CORP_LIMIT: ${{ vars.PER_CORP_LIMIT }}
         run: |
           python scripts/build_static_data.py

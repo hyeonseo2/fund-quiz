@@ -12,6 +12,19 @@ import requests
 
 OPENDART_BASE = "https://opendart.fss.or.kr/api"
 
+MAJOR_MANAGER_NAMES = [
+    "KB자산운용",
+    "삼성자산운용",
+    "미래에셋자산운용",
+    "대신자산운용",
+    "키움자산운용",
+    "교보자산운용",
+    "하나자산운용",
+    "신한자산운용",
+    "NH투자증권자산운용",
+    "마이다스에셋자산운용",
+]
+
 
 @dataclass
 class Disclosure:
@@ -20,6 +33,40 @@ class Disclosure:
     report_nm: str
     rcept_no: str
     rcept_dt: str
+
+
+def fetch_major_corp_codes(api_key: str) -> list[str]:
+    import io
+    import zipfile
+    import xml.etree.ElementTree as ET
+
+    resp = requests.get(f"{OPENDART_BASE}/corpCode.xml", params={"crtfc_key": api_key}, timeout=60)
+    resp.raise_for_status()
+    content = resp.content
+
+    if content[:2] == b"PK":
+        zf = zipfile.ZipFile(io.BytesIO(content))
+        xml_name = next((n for n in zf.namelist() if n.lower().endswith('.xml')), None)
+        if not xml_name:
+            return []
+        xml_bytes = zf.read(xml_name)
+    else:
+        xml_bytes = content
+
+    root = ET.fromstring(xml_bytes)
+    name_to_code: dict[str, str] = {}
+    for item in root.findall('list'):
+        name = (item.findtext('corp_name') or '').strip()
+        code = (item.findtext('corp_code') or '').strip()
+        if name and code:
+            name_to_code[name] = code
+
+    out: list[str] = []
+    for n in MAJOR_MANAGER_NAMES:
+        code = name_to_code.get(n)
+        if code:
+            out.append(code)
+    return out
 
 
 def fetch_disclosures(api_key: str, corp_code: str, from_date: str, to_date: str, page_count: int = 20) -> list[Disclosure]:
@@ -142,7 +189,14 @@ def main() -> None:
         raise SystemExit("OPENDART_API_KEY is required")
 
     gemini_key = os.getenv("GEMINI_API_KEY", "").strip()
-    corp_codes = [c.strip() for c in os.getenv("CORP_CODES", "00267526,00260453").split(",") if c.strip()]
+    corp_codes_env = [c.strip() for c in os.getenv("CORP_CODES", "").split(",") if c.strip()]
+    corp_codes = corp_codes_env or fetch_major_corp_codes(opendart_key)
+    if not corp_codes:
+        corp_codes = ["00267526", "00260453"]
+
+    major_limit = max(1, min(int(os.getenv("MAJOR_MANAGER_LIMIT", "10")), 20))
+    corp_codes = corp_codes[:major_limit]
+
     per_corp = max(1, min(int(os.getenv("PER_CORP_LIMIT", "5")), 20))
 
     to_date = datetime.now(timezone.utc).date()
