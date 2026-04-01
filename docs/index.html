@@ -1,125 +1,230 @@
 <!doctype html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fund Quiz</title>
-  <style>
-    body{font-family:Inter,system-ui,sans-serif;max-width:980px;margin:24px auto;padding:0 16px;color:#111827}
-    .card{border:1px solid #e5e7eb;border-radius:12px;padding:14px;margin-bottom:12px;background:#fff}
-    input{padding:10px;border:1px solid #d1d5db;border-radius:8px;width:100%}
-    button{background:#2563eb;color:#fff;border:0;padding:8px 10px;border-radius:8px;cursor:pointer}
-    .small-btn{background:#eef2ff;color:#1e3a8a}
-    .row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-    .fund{border:1px solid #e5e7eb;border-radius:10px;padding:10px;margin-top:8px}
-    .q{border:1px solid #e5e7eb;border-radius:10px;padding:10px;margin-top:8px}
-    .muted{color:#6b7280;font-size:13px}
-  </style>
-</head>
-<body>
-  <h1>펀드 설명서 이해도 퀴즈</h1>
-  <p class="muted">OpenDART 공시 기반 정적 데이터로 매일 갱신됩니다.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fund Quiz</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --line: #dde3ec;
+        --text: #202633;
+        --muted: #5c6779;
+        --primary: #2563eb;
+        --primary-weak: #dbeafe;
+        --ok: #118c4f;
+        --danger: #b42318;
+      }
+      * { box-sizing: border-box; }
+      body {
+        font-family: Inter, Pretendard, 'Apple SD Gothic Neo', 'Malgun Gothic', Arial, sans-serif;
+        margin: 0;
+        padding: 24px;
+        background: linear-gradient(180deg, #f9fbff 0%, #f5f7fb 45%, #eef2f8 100%);
+        color: var(--text);
+      }
+      .wrap { max-width: 1024px; margin: 0 auto; }
+      h1 { font-size: 1.7rem; margin: 0 0 14px; letter-spacing: -0.02em; }
+      .subtitle { color: var(--muted); margin: 0 0 20px; }
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 16px;
+        margin-bottom: 14px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+      }
+      .btn, .small-btn {
+        border: 0;
+        border-radius: 10px;
+        padding: 7px 10px;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 12px;
+      }
+      .btn { background: var(--primary); color: #fff; }
+      .small-btn { background: #f1f5ff; color: #133f9c; text-decoration: none; display: inline-block; }
+      .compact-btn { padding: 5px 8px !important; font-size: 11px !important; border-radius: 8px; }
+      input, select {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 10px 12px;
+        min-width: 220px;
+        font-size: 14px;
+        background: #fff;
+      }
+      .controls { display: grid; grid-template-columns: minmax(180px, 1.2fr) minmax(170px, 1fr) auto; gap: 8px; margin-bottom: 10px; }
+      .funds-list { display: grid; gap: 10px; }
+      .fund-item { padding: 12px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+      .fund-title { font-size: 15px; font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+      .fund-meta { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 8px; color: var(--muted); font-size: 13px; margin-bottom: 10px; }
+      .fund-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+      .question { border: 1px solid var(--line); border-radius: 12px; padding: 14px; margin: 12px 0; background: #fbfdff; }
+      .choices { display: grid; gap: 4px; }
+      .choice-option { display: flex; align-items: center; gap: 8px; margin: 0; padding: 4px 6px; border-radius: 8px; }
+      .choice-text { font-size: 13px; }
+      .result-item { border: 1px solid #e8edfa; border-radius: 10px; background: #fbfdff; padding: 10px; margin: 8px 0; }
+      .status-chip { display: inline-block; background: #eef2ff; color: #304ffe; padding: 3px 8px; border-radius: 999px; font-size: 11px; }
+      .status-chip.disabled { background: #ffeaea; color: #b42318; }
+      .difficulty-chip { display: inline-flex; align-items: center; border-radius: 999px; padding: 3px 9px; font-size: 11px; font-weight: 700; }
+      .difficulty-chip.easy { background: #ecfdf3; color: #0f7a45; }
+      .difficulty-chip.medium { background: #fff7e8; color: #9a5b00; }
+      .difficulty-chip.hard { background: #fff0f1; color: #b42318; }
+      .hidden { display: none; }
+      .small { color: var(--muted); font-size: 13px; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>펀드 설명서 이해도 퀴즈</h1>
+      <p class="subtitle">GitHub Pages 정적 배치 데이터 기반 · UI/UX는 Cloud Run 버전과 동일한 흐름으로 제공됩니다.</p>
 
-  <div class="card">
-    <div class="row" style="margin-bottom:8px">
-      <input id="search" placeholder="펀드명/운용사 검색" />
-      <button onclick="renderFunds()">검색</button>
-    </div>
-    <div id="meta" class="muted"></div>
-    <div id="funds"></div>
-  </div>
+      <div class="card hidden" id="quizPanel">
+        <h2>퀴즈</h2>
+        <div id="quizInfo"></div>
+        <form id="quizForm"></form>
+        <div class="row"><button class="btn compact-btn" onclick="submitQuiz(event)">채점하기</button></div>
+        <div id="result"></div>
+      </div>
 
-  <div class="card" id="quizCard" style="display:none">
-    <h3 id="quizTitle"></h3>
-    <form id="quizForm"></form>
-    <div class="row" style="margin-top:10px">
-      <button type="button" onclick="submitQuiz()">채점하기</button>
-      <button type="button" class="small-btn" onclick="closeQuiz()">닫기</button>
-    </div>
-    <div id="result" style="margin-top:10px"></div>
-  </div>
-
-<script>
-let DATA = { funds: [] };
-let CURRENT = null;
-
-async function loadData(){
-  const res = await fetch('./data/funds.json', { cache: 'no-store' });
-  DATA = await res.json();
-  const d = new Date(DATA.generated_at);
-  document.getElementById('meta').textContent = `총 ${DATA.count || 0}개 · 업데이트: ${d.toLocaleString()}`;
-  renderFunds();
-}
-
-function renderFunds(){
-  const q = (document.getElementById('search').value || '').trim().toLowerCase();
-  const funds = (DATA.funds || []).filter(f => !q || f.fund_name.toLowerCase().includes(q) || (f.manager_name||'').toLowerCase().includes(q));
-  const el = document.getElementById('funds');
-  if(!funds.length){ el.innerHTML = '<p class="muted">검색 결과가 없습니다.</p>'; return; }
-  el.innerHTML = funds.slice(0, 100).map(f => `
-    <div class="fund">
-      <div><b>${escapeHtml(f.fund_name)}</b></div>
-      <div class="muted">${escapeHtml(f.manager_name || '-')} · ${escapeHtml(f.latest_disclosure_date || '-')}</div>
-      <div class="row" style="margin-top:8px">
-        <button onclick="openQuiz(${f.fund_id})">퀴즈</button>
-        <a class="small-btn" style="text-decoration:none;padding:8px 10px;border-radius:8px;display:inline-block" href="${f.viewer_url}" target="_blank" rel="noopener">공시 링크</a>
+      <div class="card">
+        <h3>퀴즈 생성</h3>
+        <div class="small" id="meta"></div>
+        <div class="controls">
+          <input id="q" placeholder="펀드명/운용사 검색" />
+          <select id="managerFilter"><option value="">전체 운용사</option></select>
+          <button class="btn compact-btn" onclick="renderFunds()">검색</button>
+        </div>
+        <div id="funds"></div>
       </div>
     </div>
-  `).join('');
-}
 
-function openQuiz(id){
-  CURRENT = (DATA.funds || []).find(f => f.fund_id === id);
-  if(!CURRENT) return;
-  document.getElementById('quizCard').style.display = 'block';
-  document.getElementById('quizTitle').textContent = `${CURRENT.quiz?.title || '퀴즈'} (${(CURRENT.quiz?.questions || []).length}문항)`;
-  const form = document.getElementById('quizForm');
-  form.innerHTML = '';
-  (CURRENT.quiz?.questions || []).forEach((q, i) => {
-    const div = document.createElement('div');
-    div.className = 'q';
-    div.innerHTML = `<b>${i+1}. ${escapeHtml(q.prompt)}</b><br/>` +
-      (q.choices || []).map((c, ci) => `<label><input type='radio' name='q${i}' value='${ci}'/> ${escapeHtml(c)}</label><br/>`).join('');
-    form.appendChild(div);
-  });
-  document.getElementById('result').innerHTML = '';
-  document.getElementById('quizCard').scrollIntoView({behavior:'smooth'});
-}
+    <script>
+      let DATA = { funds: [], generated_at: null, count: 0 };
+      let currentFund = null;
+      let currentQuiz = null;
 
-function submitQuiz(){
-  if(!CURRENT) return;
-  const qs = CURRENT.quiz?.questions || [];
-  let score = 0;
-  const lines = [];
-  qs.forEach((q, i) => {
-    const picked = document.querySelector(`input[name='q${i}']:checked`);
-    const ok = picked && Number(picked.value) === Number(q.answer_index);
-    if(ok) score += 1;
-    lines.push(`
-      <div class='q'>
-        <b>문항 ${i+1}</b> · ${ok ? '정답' : '오답'}<br/>
-        해설: ${escapeHtml(q.explanation || '-') }<br/>
-        <a href='${CURRENT.viewer_url}' target='_blank' rel='noopener'>공시 링크</a>
-      </div>
-    `);
-  });
-  document.getElementById('result').innerHTML = `<h3>채점 결과: ${score}/${qs.length}</h3>` + lines.join('');
-}
+      function escapeHtml(value) {
+        return String(value)
+          .replace(/&/g, '&amp;')
+          .replace(/</g, '&lt;')
+          .replace(/>/g, '&gt;')
+          .replace(/"/g, '&quot;')
+          .replace(/'/g, '&#039;');
+      }
 
-function closeQuiz(){
-  document.getElementById('quizCard').style.display = 'none';
-}
+      function formatDifficultyChip(raw) {
+        const key = String(raw || '').toLowerCase();
+        const map = {
+          easy: { label: 'Easy', icon: '🟢', cls: 'easy' },
+          medium: { label: 'Medium', icon: '🟠', cls: 'medium' },
+          hard: { label: 'Hard', icon: '🔴', cls: 'hard' },
+        };
+        const item = map[key] || { label: raw || 'Unknown', icon: '⚪', cls: 'medium' };
+        return `<span class="difficulty-chip ${item.cls}">${item.icon} ${escapeHtml(item.label)}</span>`;
+      }
 
-function escapeHtml(v){
-  return String(v)
-    .replace(/&/g,'&amp;')
-    .replace(/</g,'&lt;')
-    .replace(/>/g,'&gt;')
-    .replace(/"/g,'&quot;')
-    .replace(/'/g,'&#039;');
-}
+      async function loadData() {
+        const resp = await fetch('./data/funds.json', { cache: 'no-store' });
+        DATA = await resp.json();
+        const dateText = DATA.generated_at ? new Date(DATA.generated_at).toLocaleString() : '-';
+        document.getElementById('meta').textContent = `총 ${DATA.count || 0}개 · 업데이트 ${dateText}`;
+        loadManagers();
+        renderFunds();
+      }
 
-loadData();
-</script>
-</body>
+      function loadManagers() {
+        const sel = document.getElementById('managerFilter');
+        const names = [...new Set((DATA.funds || []).map(f => f.manager_name).filter(Boolean))].sort();
+        sel.innerHTML = '<option value="">전체 운용사</option>' + names.map(n => `<option value="${escapeHtml(n)}">${escapeHtml(n)}</option>`).join('');
+      }
+
+      function filteredFunds() {
+        const q = document.getElementById('q').value.trim().toLowerCase();
+        const manager = document.getElementById('managerFilter').value;
+        return (DATA.funds || []).filter(f => {
+          if (manager && f.manager_name !== manager) return false;
+          if (!q) return true;
+          return (f.fund_name || '').toLowerCase().includes(q) || (f.manager_name || '').toLowerCase().includes(q);
+        });
+      }
+
+      function renderFunds() {
+        const funds = filteredFunds();
+        const wrap = document.getElementById('funds');
+        if (!funds.length) {
+          wrap.innerHTML = '<p class="small">표시할 상품이 없습니다.</p>';
+          return;
+        }
+
+        wrap.innerHTML = `<div class="funds-list">${funds.slice(0, 100).map(f => `
+          <article class="fund-item">
+            <div class="fund-title">${escapeHtml(f.fund_name)}</div>
+            <div class="fund-meta">
+              <span>운용사: ${escapeHtml(f.manager_name || '-')}</span>
+              <span>최신 공시: ${escapeHtml(f.latest_disclosure_date || '-')}</span>
+            </div>
+            <div class="fund-actions">
+              <button class="btn compact-btn" onclick="openFund(${f.fund_id})">퀴즈</button>
+              <a class="small-btn compact-btn" href="${f.viewer_url}" target="_blank" rel="noopener">공시 링크</a>
+            </div>
+          </article>
+        `).join('')}</div>`;
+      }
+
+      function openFund(fundId) {
+        const fund = (DATA.funds || []).find(f => Number(f.fund_id) === Number(fundId));
+        if (!fund || !fund.quiz) return;
+        currentFund = fund;
+        currentQuiz = fund.quiz;
+        renderQuiz();
+      }
+
+      function renderQuiz() {
+        const form = document.getElementById('quizForm');
+        const info = document.getElementById('quizInfo');
+        const qCount = (currentQuiz.questions || []).length;
+        info.textContent = `${currentQuiz.title || '퀴즈'} (${qCount}문항)`;
+
+        form.innerHTML = '';
+        (currentQuiz.questions || []).forEach((q, idx) => {
+          const block = document.createElement('div');
+          block.className = 'question';
+          block.innerHTML = `<div><strong>${idx + 1}. ${escapeHtml(q.prompt)}</strong> ${formatDifficultyChip(q.difficulty)}</div>`;
+          const choices = document.createElement('div');
+          choices.className = 'choices';
+          (q.choices || []).forEach((c, ci) => {
+            choices.innerHTML += `<label class="choice-option"><input type="radio" name="q${idx}" value="${ci}" /><span class="choice-text">${escapeHtml(c)}</span></label>`;
+          });
+          block.appendChild(choices);
+          form.appendChild(block);
+        });
+
+        document.getElementById('result').innerHTML = '';
+        document.getElementById('quizPanel').classList.remove('hidden');
+        document.getElementById('quizPanel').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      function submitQuiz(event) {
+        event.preventDefault();
+        if (!currentQuiz || !currentFund) return;
+
+        let score = 0;
+        const html = [];
+        (currentQuiz.questions || []).forEach((q, i) => {
+          const picked = document.querySelector(`input[name="q${i}"]:checked`);
+          const ok = picked && Number(picked.value) === Number(q.answer_index);
+          if (ok) score += 1;
+          const badge = ok ? 'status-chip' : 'status-chip disabled';
+          html.push(`<div class="result-item"><div><strong>문항 ${i + 1}</strong> <span class="${badge}">${ok ? '정답' : '오답'}</span></div><div>해설: ${escapeHtml(q.explanation || '-')}</div><div style="margin-top:8px;"><a class="small-btn compact-btn" href="${currentFund.viewer_url}" target="_blank" rel="noopener">공시 링크</a></div></div>`);
+        });
+
+        document.getElementById('result').innerHTML = `<h3>채점 결과: ${score}/${(currentQuiz.questions || []).length}</h3>` + html.join('');
+      }
+
+      document.getElementById('managerFilter').addEventListener('change', renderFunds);
+      loadData();
+    </script>
+  </body>
 </html>
