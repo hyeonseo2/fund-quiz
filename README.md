@@ -1,185 +1,160 @@
 # Fund Quiz Service
 
-OpenDART 공시 문서를 바탕으로 금융상품 퀴즈를 자동 생성하는 API 서비스입니다.
-문서 수집 → 텍스트 파싱 → 핵심 사실 추출 → 객관식 퀴즈 생성/채점 흐름을 하나의 백엔드로 제공합니다.
+OpenDART 공시 문서를 기반으로 금융상품 이해도를 검증할 수 있는 퀴즈를 자동 생성하는 서비스입니다.
+공시 데이터를 구조화하고, 핵심 내용을 문제 형태로 변환하여 사용자가 문서를 보다 쉽게 이해할 수 있도록 돕는 것을 목표로 합니다.
 
 ---
 
-## ✨ What this project does
+## Demo
 
-- **공시 기반 데이터 수집**
-  - OpenDART `list.json`, `document.xml`를 통해 최신 공시를 수집합니다.
-- **문서 파싱/정규화**
-  - ZIP/XML/HTML 응답을 파싱해 문서 블록으로 저장합니다.
-- **퀴즈 자동 생성**
-  - 규칙 기반 + LLM(Gemini/OpenAI 키 연동) 방식으로 퀴즈를 생성합니다.
-- **근거 중심 UX**
-  - 퀴즈 결과에서 공시 링크로 바로 이동해 문서 원문을 확인할 수 있습니다.
-- **운영 자동화 친화적 구조**
-  - Cloud Run 배포, GitHub Actions 배치 수집, GitHub Pages 프론트 배포를 지원합니다.
+* 서비스: [https://hyeonseo2.github.io/fund-quiz/](https://hyeonseo2.github.io/fund-quiz/)
+
+<img width="962" height="881" alt="image" src="https://github.com/user-attachments/assets/5af32024-6309-46e0-983b-d8a4149b2ab5" />
 
 ---
 
-## 🧱 Tech Stack
+## Overview
 
-- **Backend**: FastAPI, SQLAlchemy, Pydantic
-- **Storage**: SQLite (기본) / PostgreSQL(확장)
-- **Queue/Infra**: Redis(옵션), Cloud Run
-- **Parsing**: lxml, BeautifulSoup
-- **LLM (optional)**: Gemini API, OpenAI API
-- **CI/CD & Ops**: GitHub Actions, GitHub Pages
+이 프로젝트는 금융상품 공시 문서를 **사용자의 이해를 확인할 수 있는 인터랙티브한 콘텐츠(퀴즈)**로 변환합니다.
 
----
+주요 흐름은 다음과 같습니다:
 
-## 📦 Project Structure
-
-```bash
-app/
-  api/                # public/admin API
-  agents/             # fact 추출, quiz 생성/검증
-  clients/            # OpenDART client
-  core/               # settings, logging
-  db/                 # model/session
-  services/           # pipeline orchestration
-  parsers/            # zip/xml/html parser
-scripts/
-tests/
-.github/workflows/    # (추가) 배치 수집, pages 배포
+```
+공시 수집 → 문서 파싱 → 핵심 정보 추출 → 퀴즈 생성 → 사용자 풀이 및 채점
 ```
 
 ---
 
-## 🚀 Quick Start
+## Key Features
 
-### 1) Install
+* **공시 데이터 기반 수집**
+
+  * OpenDART API를 활용하여 최신 공시 문서를 수집
+
+* **문서 구조화 및 파싱**
+
+  * XML/HTML 형태의 공시 데이터를 정제하여 분석 가능한 형태로 변환
+
+* **퀴즈 자동 생성**
+
+  * 규칙 기반 + LLM을 활용하여 객관식 문제 생성
+
+* **근거 기반 검증**
+
+  * 퀴즈 결과와 함께 원문 공시 링크 제공
+
+
+---
+
+## Architecture
+
+```
+OpenDART API
+    ↓
+Document Parser (XML / HTML)
+    ↓
+Fact Extraction
+    ↓
+Quiz Generator (Rule + LLM)
+    ↓
+API / Static JSON
+    ↓
+Frontend (GitHub Pages)
+```
+
+---
+
+## Tech Stack
+
+| Category       | Stack                       |
+| -------------- | --------------------------- |
+| Backend        | FastAPI, SQLAlchemy         |
+| Database       | SQLite / PostgreSQL         |
+| Parsing        | lxml, BeautifulSoup         |
+| LLM (Optional) | OpenAI, Gemini              |
+| Infra          | Cloud Run, Redis (optional) |
+| CI/CD          | GitHub Actions              |
+| Frontend       | GitHub Pages                |
+
+---
+
+## Getting Started
+
+### Install
 
 ```bash
 python -m pip install -r requirements.txt
 cp .env.example .env
 ```
 
-### 2) Run API
+### Run
 
 ```bash
 uvicorn app.main:app --host 0.0.0.0 --port 8080
 ```
 
-### 3) Open
+### Access
 
-- Local: `http://localhost:8080`
-- Health: `http://localhost:8080/health`
-
----
-
-## ⚙️ Environment Variables
-
-핵심 변수들:
-
-- `OPENDART_API_KEY` : OpenDART 인증키
-- `GEMINI_API_KEY` : Gemini 퀴즈 생성용 (선택)
-- `OPENAI_API_KEY` : OpenAI 연동용 (선택)
-- `ADMIN_TOKEN` : admin API 보호용 토큰
-- `DATABASE_URL` : DB 연결 문자열
-- `AUTO_AI_GENERATE_COUNT` : 초기 자동 LLM 퀴즈 생성 개수 (기본 1)
-- `CORS_ALLOW_ORIGINS` : 허용 Origin (예: `https://<username>.github.io`)
-
-예시:
-
-```env
-OPENDART_API_KEY=...
-ADMIN_TOKEN=...
-GEMINI_API_KEY=...
-DATABASE_URL=sqlite:///./fund_quiz.db
-AUTO_AI_GENERATE_COUNT=1
-CORS_ALLOW_ORIGINS=https://<username>.github.io
-```
+* [http://localhost:8080](http://localhost:8080)
+* [http://localhost:8080/health](http://localhost:8080/health)
 
 ---
 
-## 🌐 Deploy: Cloud Run
+## Environment Variables
+
+| Variable               | Description       |
+| ---------------------- | ----------------- |
+| OPENDART_API_KEY       | OpenDART 인증 키     |
+| OPENAI_API_KEY         | OpenAI API 키 (선택) |
+| GEMINI_API_KEY         | Gemini API 키 (선택) |
+| ADMIN_TOKEN            | 관리자 API 보호        |
+| DATABASE_URL           | DB 연결 문자열         |
+| AUTO_AI_GENERATE_COUNT | 자동 생성 퀴즈 수        |
+
+---
+
+## Deployment
+
+### Cloud Run
 
 ```bash
-gcloud builds submit --tag gcr.io/<PROJECT_ID>/fund-quiz-api .
+gcloud builds submit --tag gcr.io/<PROJECT_ID>/fund-quiz-api
 
 gcloud run deploy fund-quiz-api \
   --image gcr.io/<PROJECT_ID>/fund-quiz-api \
   --region asia-northeast3 \
-  --allow-unauthenticated \
-  --set-env-vars OPENDART_API_KEY=<KEY>,ADMIN_TOKEN=<TOKEN>,AUTO_AI_GENERATE_COUNT=1
+  --allow-unauthenticated
 ```
 
 ---
 
-## 📅 GitHub Actions: Daily Static Build
+## Static Mode (GitHub Pages)
 
-이 저장소는 **GitHub Pages 단독 운영**을 지원합니다.
-백엔드 API를 상시 운영하지 않고, GitHub Actions가 매일 데이터를 생성해 `docs/data/funds.json`으로 배포합니다.
+GitHub Actions를 통해 데이터를 주기적으로 생성하고
+정적 JSON 기반으로 서비스를 운영할 수 있습니다.
 
-워크플로우 파일: `.github/workflows/daily-sync.yml`
-
-필요한 Repository Secrets:
-
-- `OPENDART_API_KEY`
-- `GEMINI_API_KEY` (선택)
-- `CORP_CODES` (쉼표 구분, 예: `00267526,00260453`)
-
-선택 Repository Variable:
-
-- `PER_CORP_LIMIT` (기본 5)
-
-동작:
-
-- 스케줄 실행(UTC 기준)
-- OpenDART 공시 목록 수집
-- (옵션) Gemini로 퀴즈 생성
-- `docs/data/funds.json` 갱신 후 자동 커밋
+* 데이터: `docs/data/funds.json`
+* 워크플로우: `.github/workflows/daily-sync.yml`
 
 ---
 
-## 🧩 GitHub Pages Frontend
+## API
 
-정적 프론트는 `docs/` 폴더를 사용하며 GitHub Pages로 배포됩니다.
+### Public
 
-워크플로우 파일: `.github/workflows/pages.yml`
+* `GET /api/funds`
+* `GET /api/funds/{fund_id}`
+* `GET /api/funds/{fund_id}/quiz`
+* `POST /api/funds/{fund_id}/quiz/generate`
 
-기능:
+### Admin
 
-- 정적 JSON 데이터 기반 펀드/퀴즈 표시
-- 브라우저 내 채점
-- 공시 링크 바로 이동
-
-설정 포인트:
-
-1. GitHub Pages Source를 **GitHub Actions**로 선택
-2. `main` 브랜치 반영 시 자동 배포
+* `POST /admin/disclosures/backfill`
+* `POST /admin/manager/sync`
 
 ---
 
-## 🔌 Public API (핵심)
+## Notes
 
-- `GET /api/funds`
-- `GET /api/funds/search?q=`
-- `GET /api/funds/{fund_id}`
-- `GET /api/funds/{fund_id}/quiz`
-- `POST /api/funds/{fund_id}/quiz/generate`
-- `POST /api/quiz-attempts`
-- `GET /api/funds/{fund_id}/document-preview`
-
-관리자 API (토큰 필요):
-
-- `POST /admin/disclosures/backfill`
-- `POST /admin/manager/sync`
-
----
-
-## 🧪 Test
-
-```bash
-pytest -q
-```
-
----
-
-## 📄 License
-
-If you plan to open-source this project, add a license file (`MIT`, `Apache-2.0`, etc.).
+* 본 프로젝트는 금융상품 정보를 제공하며 투자 판단에 대한 책임은 사용자에게 있습니다.
+* OpenDART 데이터 사용 정책을 준수해야 합니다.
