@@ -183,6 +183,15 @@ def gemini_quiz(gemini_key: str, title: str) -> dict[str, Any] | None:
         return None
 
 
+def _int_env(name: str, default: int, low: int, high: int) -> int:
+    raw = (os.getenv(name, "") or "").strip()
+    try:
+        val = int(raw) if raw else default
+    except ValueError:
+        val = default
+    return max(low, min(val, high))
+
+
 def main() -> None:
     opendart_key = os.getenv("OPENDART_API_KEY", "").strip()
     if not opendart_key:
@@ -194,10 +203,10 @@ def main() -> None:
     if not corp_codes:
         corp_codes = ["00267526", "00260453"]
 
-    major_limit = max(1, min(int(os.getenv("MAJOR_MANAGER_LIMIT", "10")), 20))
+    major_limit = _int_env("MAJOR_MANAGER_LIMIT", default=10, low=1, high=20)
     corp_codes = corp_codes[:major_limit]
 
-    per_corp = max(1, min(int(os.getenv("PER_CORP_LIMIT", "5")), 20))
+    per_corp = _int_env("PER_CORP_LIMIT", default=5, low=1, high=20)
 
     to_date = datetime.now(timezone.utc).date()
     from_date = to_date - timedelta(days=30)
