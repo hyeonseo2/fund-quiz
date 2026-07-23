@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-22T03:44:31.751825+00:00",
+  "generated_at": "2026-07-23T03:42:41.832384+00:00",
   "count": 32,
   "funds": [
     {
@@ -249,17 +249,17 @@
     },
     {
       "fund_id": 6,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX금액티브특별자산상장지수투자신탁[금-파생재간접형])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX고배당주증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
       "latest_disclosure_date": "20260722",
-      "rcept_no": "20260722000009",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000009",
+      "rcept_no": "20260722000092",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000092",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX금액티브특별자산상장지수투...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX고배당주증권상장지수투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -298,17 +298,17 @@
     },
     {
       "fund_id": 7,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500액티브증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX한국대만IT프리미어증권상장지수투자신탁[주식-파생형])",
       "manager_name": "삼성자산운용",
       "latest_disclosure_date": "20260722",
-      "rcept_no": "20260722000023",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000023",
+      "rcept_no": "20260722000095",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000095",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500액티브증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX한국대만IT프리미어증권상...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -347,17 +347,17 @@
     },
     {
       "fund_id": 8,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500변동성확대시커버드콜증권상장지수투자신탁[주식-파생형])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX한중반도체증권상장지수투자신탁[주식-파생형](합성))",
       "manager_name": "삼성자산운용",
       "latest_disclosure_date": "20260722",
-      "rcept_no": "20260722000024",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000024",
+      "rcept_no": "20260722000096",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000096",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500변동성확대...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX한중반도체증권상장지수투자...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -396,17 +396,17 @@
     },
     {
       "fund_id": 9,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500데일리커버드콜OTM증권상장지수투자신탁[주식-파생형])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국빅테크10증권상장지수투자신탁[주식-파생형](H))",
       "manager_name": "삼성자산운용",
       "latest_disclosure_date": "20260722",
-      "rcept_no": "20260722000029",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000029",
+      "rcept_no": "20260722000098",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000098",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500데일리커버...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국빅테크10증권상장지수...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -445,17 +445,17 @@
     },
     {
       "fund_id": 10,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX코리아밸류업증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500증권상장지수투자신탁[주식](H))",
       "manager_name": "삼성자산운용",
       "latest_disclosure_date": "20260722",
-      "rcept_no": "20260722000035",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000035",
+      "rcept_no": "20260722000099",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260722000099",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX코리아밸류업증권상장지수투...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국S&P500증권상장지...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
