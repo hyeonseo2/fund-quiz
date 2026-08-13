@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-12T02:44:07.118360+00:00",
+  "generated_at": "2026-08-13T02:43:47.487034+00:00",
   "count": 35,
   "funds": [
     {
@@ -249,17 +249,17 @@
     },
     {
       "fund_id": 6,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX경기소비재증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX코리아소버린AI증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000138",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000138",
+      "latest_disclosure_date": "20260806",
+      "rcept_no": "20260806000012",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000012",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX경기소비재증권상장지수투자...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX코리아소버린AI증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -298,17 +298,17 @@
     },
     {
       "fund_id": 7,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX헬스케어증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX28-12회사채(AA-이상)액티브증권상장지수투자신탁[채권])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000141",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000141",
+      "latest_disclosure_date": "20260806",
+      "rcept_no": "20260806000013",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000013",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX헬스케어증권상장지수투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX28-12회사채(...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -347,17 +347,17 @@
     },
     {
       "fund_id": 8,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX삼성전자단일종목레버리지증권상장지수투자신탁[주식-파생형])",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX인버스증권상장지수투자신탁[주식-파생형])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000146",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000146",
+      "latest_disclosure_date": "20260806",
+      "rcept_no": "20260806000015",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000015",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX삼성전자단일종목레버리지증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX인버스증권상장지수...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -396,17 +396,17 @@
     },
     {
       "fund_id": 9,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEXSK하이닉스단일종목레버리지증권상장지수투자신탁[주식-파생형])",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX27-12회사채(AA-이상)액티브증권상장지수투자신탁[채권])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000154",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000154",
+      "latest_disclosure_date": "20260806",
+      "rcept_no": "20260806000023",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000023",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEXSK하이닉스단일종목레버리...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX27-12회사채(...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -445,17 +445,17 @@
     },
     {
       "fund_id": 10,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEXK콘텐츠증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX코스닥150레버리지증권상장지수투자신탁[주식-파생형])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000131",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000131",
+      "latest_disclosure_date": "20260806",
+      "rcept_no": "20260806000028",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260806000028",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEXK콘텐츠증권상장지수투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX코스닥150레버리...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -494,17 +494,17 @@
     },
     {
       "fund_id": 11,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER삼성전자SK하이닉스미국채혼합50증권상장지수투자신탁(채권혼합))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER미국S&P500타겟데일리커버드콜증권상장지수투자신탁(주식))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20260811",
-      "rcept_no": "20260811000101",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260811000101",
+      "latest_disclosure_date": "20260807",
+      "rcept_no": "20260807000576",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000576",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER삼성전자SK하...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER미국S&P50...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -543,17 +543,17 @@
     },
     {
       "fund_id": 12,
-      "fund_name": "투자설명서(집합투자증권)(미래에셋코리아주도테마ETF증권투자신탁(주식-재간접형))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋재형글로벌그레이트컨슈머증권자투자신탁1호(채권혼합))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260807",
-      "rcept_no": "20260807000177",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000177",
+      "rcept_no": "20260807000581",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000581",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"투자설명서(집합투자증권)(미래에셋코리아주도테마ETF증권투자신탁(주식-재간...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋재형글로벌그레이트컨슈머...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -592,17 +592,17 @@
     },
     {
       "fund_id": 13,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋코리아주도테마ETF증권투자신탁(주식-재간접형))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋퇴직연금펀더멘탈인덱스40증권자투자신탁[채권혼합])",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000312",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000312",
+      "latest_disclosure_date": "20260807",
+      "rcept_no": "20260807000590",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000590",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋코리아주도테마ETF증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋퇴직연금펀더멘탈인덱스4...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -641,17 +641,17 @@
     },
     {
       "fund_id": 14,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋OCIO-DB표준형증권자투자신탁(채권혼합))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋소득공제장기컨슈머G증권전환형자투자신탁1호(주식))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20260730",
-      "rcept_no": "20260730000339",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260730000339",
+      "latest_disclosure_date": "20260807",
+      "rcept_no": "20260807000595",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000595",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋OCIO-DB표준형증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋소득공제장기컨슈머G증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -690,17 +690,17 @@
     },
     {
       "fund_id": 15,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋개인연금아시아그레이트컨슈머증권전환형자투자신탁1호(주식-재간접형))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋글로벌그레이트컨슈머연금증권전환형자투자신탁1호(주식))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20260730",
-      "rcept_no": "20260730000344",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260730000344",
+      "latest_disclosure_date": "20260807",
+      "rcept_no": "20260807000597",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260807000597",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋개인연금아시아그레이트컨슈머증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋글로벌그레이트컨슈머연금...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -984,17 +984,17 @@
     },
     {
       "fund_id": 21,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(하나1Q머니마켓액티브증권상장지수투자신탁[채권])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(하나1Q현대차그룹채권(A+이상)&국고통안증권상장지수투자신탁[채권])",
       "manager_name": "하나자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000227",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000227",
+      "latest_disclosure_date": "20260812",
+      "rcept_no": "20260812000323",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000323",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(하나1Q머니마켓액티브증권상장지...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(하나1Q현대차그룹채권(A+이상)&국고...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -1033,17 +1033,17 @@
     },
     {
       "fund_id": 22,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(하나1QCD금리액티브증권상장지수투자신탁[채권혼합-파생형](합성))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(하나1Q머니마켓액티브증권상장지수투자신탁[채권])",
       "manager_name": "하나자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000245",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000245",
+      "latest_disclosure_date": "20260812",
+      "rcept_no": "20260812000335",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000335",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(하나1QCD금리액티브증권상장지...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(하나1Q머니마켓액티브증권상장지수투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -1082,17 +1082,17 @@
     },
     {
       "fund_id": 23,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(하나개인용MMF2호)",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(하나1QCD금리액티브증권상장지수투자신탁[채권혼합-파생형](합성))",
       "manager_name": "하나자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000247",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000247",
+      "latest_disclosure_date": "20260812",
+      "rcept_no": "20260812000340",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000340",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(하나개인용MMF2호)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(하나1QCD금리액티브증권상장지수투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -1131,17 +1131,17 @@
     },
     {
       "fund_id": 24,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(하나인Best신종MMF(K-1호)[국공채])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(하나개인용MMF2호)",
       "manager_name": "하나자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000249",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000249",
+      "latest_disclosure_date": "20260812",
+      "rcept_no": "20260812000347",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000347",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(하나인Best신종MMF(K-1...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(하나개인용MMF2호)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -1180,17 +1180,17 @@
     },
     {
       "fund_id": 25,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(하나개인용MMF1호)",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(하나개인용MMF1호)",
       "manager_name": "하나자산운용",
-      "latest_disclosure_date": "20260805",
-      "rcept_no": "20260805000248",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260805000248",
+      "latest_disclosure_date": "20260812",
+      "rcept_no": "20260812000365",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260812000365",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(하나개인용MMF1호)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(하나개인용MMF1호)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
