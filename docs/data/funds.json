@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T04:35:11.321140+00:00",
+  "generated_at": "2026-09-08T04:28:58.898114+00:00",
   "count": 32,
   "funds": [
     {
@@ -249,17 +249,17 @@
     },
     {
       "fund_id": 6,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX일본TOPIX100증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX일본TOPIX100증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260907",
-      "rcept_no": "20260907000004",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000004",
+      "latest_disclosure_date": "20260908",
+      "rcept_no": "20260908000006",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000006",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX일본TOPIX10...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX일본TOPIX100증권상...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -298,17 +298,17 @@
     },
     {
       "fund_id": 7,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX미국스마트모빌리티S&P증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX차이나AI테크액티브증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260907",
-      "rcept_no": "20260907000005",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000005",
+      "latest_disclosure_date": "20260908",
+      "rcept_no": "20260908000007",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000007",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX미국스마트모빌리티...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX차이나AI테크액티브증권상...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -347,17 +347,17 @@
     },
     {
       "fund_id": 8,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX차이나AI테크액티브증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국AI테크TOP10증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260907",
-      "rcept_no": "20260907000006",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000006",
+      "latest_disclosure_date": "20260908",
+      "rcept_no": "20260908000008",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000008",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX차이나AI테크액티...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국AI테크TOP10증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -396,17 +396,17 @@
     },
     {
       "fund_id": 9,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX모닝스타멀티에셋하이인컴증권상장지수투자신탁[채권혼합-파생재간접형](H))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국드론UAMTOP10증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260907",
-      "rcept_no": "20260907000007",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000007",
+      "latest_disclosure_date": "20260908",
+      "rcept_no": "20260908000010",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000010",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX모닝스타멀티에셋하...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국드론UAMTOP10증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -445,17 +445,17 @@
     },
     {
       "fund_id": 10,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX미국AI테크TOP10증권상장지수투자신탁[주식])",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(삼성KODEX미국AI광통신네트워크증권상장지수투자신탁[주식])",
       "manager_name": "삼성자산운용",
-      "latest_disclosure_date": "20260907",
-      "rcept_no": "20260907000008",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260907000008",
+      "latest_disclosure_date": "20260908",
+      "rcept_no": "20260908000011",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260908000011",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(삼성KODEX미국AI테크TOP...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(삼성KODEX미국AI광통신네트워크증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
