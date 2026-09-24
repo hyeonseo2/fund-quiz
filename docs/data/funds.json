@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-23T04:40:13.716346+00:00",
+  "generated_at": "2026-09-24T04:45:38.738049+00:00",
   "count": 32,
   "funds": [
     {
@@ -494,17 +494,17 @@
     },
     {
       "fund_id": 11,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋AI퀀트미국투자등급회사채증권자투자신탁(채권))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋EasternEURICs업종대표증권자투자신탁1호(주식))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260923",
-      "rcept_no": "20260923000029",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000029",
+      "rcept_no": "20260923000306",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000306",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋AI퀀트미국투자등급회사채증권자...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋EasternEURICs업종대...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -543,17 +543,17 @@
     },
     {
       "fund_id": 12,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋Eastern유라시아업종대표증권자투자신탁1호(주식))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋법인용달러MMF(USD))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260923",
-      "rcept_no": "20260923000035",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000035",
+      "rcept_no": "20260923000311",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000311",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋Eastern유라시아업종대표증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋법인용달러MMF(USD))...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -592,17 +592,17 @@
     },
     {
       "fund_id": 13,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋MMF1호)",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋차이나브라질업종대표증권자투자신탁1호(주식))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260923",
-      "rcept_no": "20260923000049",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000049",
+      "rcept_no": "20260923000317",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000317",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋MMF1호)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋차이나브라질업종대표증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -641,17 +641,17 @@
     },
     {
       "fund_id": 14,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋브라질러시아업종대표증권자투자신탁1호(주식))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋차이나코어테크증권자투자신탁(주식)(H))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260923",
-      "rcept_no": "20260923000060",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000060",
+      "rcept_no": "20260923000324",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000324",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋브라질러시아업종대표증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋차이나코어테크증권자투자신탁(주...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -690,17 +690,17 @@
     },
     {
       "fund_id": 15,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋BRICs업종대표장기주택마련증권자투자신탁1호(주식))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋차이나코어테크증권자투자신탁(주식)(UH))",
       "manager_name": "미래에셋자산운용",
       "latest_disclosure_date": "20260923",
-      "rcept_no": "20260923000065",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000065",
+      "rcept_no": "20260923000332",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20260923000332",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋BRICs업종대표장기주택마련증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋차이나코어테크증권자투자신탁(주...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
