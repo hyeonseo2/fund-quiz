@@ -1,20 +1,20 @@
 {
-  "generated_at": "2026-11-11T06:07:31.074776+00:00",
+  "generated_at": "2026-11-12T07:03:24.884537+00:00",
   "count": 40,
   "funds": [
     {
       "fund_id": 1,
-      "fund_name": "일괄신고서(집합투자증권-신탁형)(KBRISE미국초대형주TOP10증권상장지수투자신탁(주식))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(KBBBIG플러스인덱스증권투자신탁(주식))",
       "manager_name": "KB자산운용",
-      "latest_disclosure_date": "20261026",
-      "rcept_no": "20261026000274",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261026000274",
+      "latest_disclosure_date": "20261105",
+      "rcept_no": "20261105000285",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000285",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"일괄신고서(집합투자증권-신탁형)(KBRISE미국초대형주TOP10증권상장지...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(KBBBIG플러스인덱스증권투자...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -53,17 +53,17 @@
     },
     {
       "fund_id": 2,
-      "fund_name": "투자설명서(집합투자증권)(KBRISE27-11회사채(AA-이상)액티브증권상장지수투자신탁(채권))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(KB브라질증권자투자신탁(주식))",
       "manager_name": "KB자산운용",
-      "latest_disclosure_date": "20261106",
-      "rcept_no": "20261106000018",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261106000018",
+      "latest_disclosure_date": "20261105",
+      "rcept_no": "20261105000274",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000274",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"투자설명서(집합투자증권)(KBRISE27-11회사채(AA-이상)액티브증권...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(KB브라질증권자투자신탁(주식)...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -102,17 +102,17 @@
     },
     {
       "fund_id": 3,
-      "fund_name": "일괄신고서(집합투자증권-신탁형)(KBRISE27-11회사채(AA-이상)액티브증권상장지수투자신탁(채권))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(KB연금중국본토A주증권자투자신탁(주식))",
       "manager_name": "KB자산운용",
-      "latest_disclosure_date": "20261021",
-      "rcept_no": "20261021000234",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261021000234",
+      "latest_disclosure_date": "20261105",
+      "rcept_no": "20261105000257",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000257",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"일괄신고서(집합투자증권-신탁형)(KBRISE27-11회사채(AA-이상)액...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(KB연금중국본토A주증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -151,17 +151,17 @@
     },
     {
       "fund_id": 4,
-      "fund_name": "투자설명서(집합투자증권)(KB코스피200타겟커버드콜월분배증권투자신탁(주식))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(KB유럽지속가능배당인컴증권자투자신탁(주식-재간접형))",
       "manager_name": "KB자산운용",
-      "latest_disclosure_date": "20261104",
-      "rcept_no": "20261104000147",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000147",
+      "latest_disclosure_date": "20261105",
+      "rcept_no": "20261105000250",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000250",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"투자설명서(집합투자증권)(KB코스피200타겟커버드콜월분배증권투자신탁(주식...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(KB유럽지속가능배당인컴증권자투...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -200,17 +200,17 @@
     },
     {
       "fund_id": 5,
-      "fund_name": "투자설명서(집합투자증권)(KB미국나스닥100타겟커버드콜월분배증권투자신탁(주식)(UH))",
+      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(KB러시아대표성장주증권자투자신탁(주식))",
       "manager_name": "KB자산운용",
-      "latest_disclosure_date": "20261104",
-      "rcept_no": "20261104000137",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261104000137",
+      "latest_disclosure_date": "20261105",
+      "rcept_no": "20261105000235",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261105000235",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"투자설명서(집합투자증권)(KB미국나스닥100타겟커버드콜월분배증권투자신탁(...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(KB러시아대표성장주증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -494,17 +494,17 @@
     },
     {
       "fund_id": 11,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋TIGER코스닥150레버리지증권상장지수투자신탁(주식-파생형))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋글로벌4차산업전환사채증권자투자신탁UH[채권])",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20261103",
-      "rcept_no": "20261103000030",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000030",
+      "latest_disclosure_date": "20261112",
+      "rcept_no": "20261112000111",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000111",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋TIGER코스닥150레버리지증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋글로벌4차산업전환사채증권자투자...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -543,17 +543,17 @@
     },
     {
       "fund_id": 12,
-      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋TIGER코스닥150증권상장지수투자신탁(주식))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋고배당포커스30증권자투자신탁1호(채권혼합))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20261103",
-      "rcept_no": "20261103000033",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261103000033",
+      "latest_disclosure_date": "20261112",
+      "rcept_no": "20261112000127",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000127",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋TIGER코스닥150증권상장지...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋고배당포커스30증권자투자신탁1...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -592,17 +592,17 @@
     },
     {
       "fund_id": 13,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER코스닥150레버리지증권상장지수투자신탁(주식-파생형))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋글로벌퀄리티증권자투자신탁(주식)(H))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20261027",
-      "rcept_no": "20261027000349",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027000349",
+      "latest_disclosure_date": "20261112",
+      "rcept_no": "20261112000133",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000133",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER코스닥150레...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋글로벌퀄리티증권자투자신탁(주식...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -641,17 +641,17 @@
     },
     {
       "fund_id": 14,
-      "fund_name": "[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER코스닥150증권상장지수투자신탁(주식))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋다이와일본밸류중소형증권자투자신탁1호(UH)(주식))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20261027",
-      "rcept_no": "20261027000319",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261027000319",
+      "latest_disclosure_date": "20261112",
+      "rcept_no": "20261112000155",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000155",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"[기재정정]일괄신고서(집합투자증권-신탁형)(미래에셋TIGER코스닥150증...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋다이와일본밸류중소형증권자투자신...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
@@ -690,17 +690,17 @@
     },
     {
       "fund_id": 15,
-      "fund_name": "투자설명서(집합투자증권)(미래에셋TIGER200커버드콜액티브증권상장지수투자신탁(주식-파생형))",
+      "fund_name": "[기재정정]투자설명서(집합투자증권)(미래에셋장기성장포커스증권자투자신탁2호(주식))",
       "manager_name": "미래에셋자산운용",
-      "latest_disclosure_date": "20261102",
-      "rcept_no": "20261102000056",
-      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261102000056",
+      "latest_disclosure_date": "20261112",
+      "rcept_no": "20261112000161",
+      "viewer_url": "https://dart.fss.or.kr/dsaf001/main.do?rcpNo=20261112000161",
       "quiz": {
         "title": "금융상품 이해 퀴즈",
         "questions": [
           {
             "difficulty": "easy",
-            "prompt": "다음 문서(\"투자설명서(집합투자증권)(미래에셋TIGER200커버드콜액티브증권상장지수투...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
+            "prompt": "다음 문서(\"[기재정정]투자설명서(집합투자증권)(미래에셋장기성장포커스증권자투자신탁2호...\")에 대한 올바른 학습 태도로 가장 적절한 것은?",
             "choices": [
               "공시 원문을 확인하고 판단한다",
               "문서 확인 없이 수익을 단정한다",
